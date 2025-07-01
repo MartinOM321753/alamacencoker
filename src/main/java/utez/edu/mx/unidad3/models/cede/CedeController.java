@@ -14,6 +14,7 @@ import utez.edu.mx.unidad3.utlis.APIResponse;
 @RestController
 @RequestMapping("/api/cede")
 @Tag(name = "Controlador de sedes", description = "Operaciones relacionadas con sedes")
+
 public class CedeController {
     @Autowired
     private CedeService cedeService;

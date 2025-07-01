@@ -78,7 +78,7 @@ public class CedeService {
             if (cedeRepository.findById(cede.getId()).isEmpty()){
                 return new APIResponse("No se encontro al cede solicitado",true, HttpStatus.NOT_FOUND);
             }
-            cedeRepository.save(cede);
+            cedeRepository.deleteCedeById(cede.getId());
             return new APIResponse("Operacion exitosa",false, HttpStatus.OK);
 
         }catch (Exception ex){
