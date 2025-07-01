@@ -20,11 +20,12 @@ public class MainSecurity {
         http.csrf(c-> c.disable()).cors(c -> c.configurationSource(corsRegistry()))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/client/**").permitAll()
+                        .requestMatchers("/api/cede/**").permitAll()
                                 .requestMatchers(
                                         "/swagger-ui.html",
                                         "/swagger-ui/**",
-                                        "/v3/api/-docs/**",
-                                        "/v3/api/-docs.yaml",
+                                        "/v3/api-docs/**",
+                                        "/v3/api-docs.yaml",
                                         "/swagger-resources/**",
                                         "/webjars/**"
                                 )
